@@ -15,7 +15,8 @@ async function callGPT(actionType, text) {
   const prompts = {
     rephrase: `You are a customer success agent. Please professionally rephrase the following text to ensure it is clear, formal, and polished, suitable for communication from a Customer Success Engineer:\n${text}, dont add subject only body`,
     extend: `You are a customer success agent,Please enhance the following text by elaborating on its details in a professional and formal manner appropriate for a Customer Success Engineer:\n${text},  dont add subject only body`,
-    concise: `You are a customer success agent, Please rewrite the following text to be concise while maintaining a formal and professional tone suitable for a Customer Success Engineer:\n${text} , dont add subject only body`
+    concise: `You are a customer success agent, Please rewrite the following text to be concise while maintaining a formal and professional tone suitable for a Customer Success Engineer:\n${text} , dont add subject only body`,
+    empathy: `You are a customer success agent. Please professionally rephrase the following text with empathy and understanding, ensuring the tone is warm, supportive, and suitable for communication from a Customer Success Engineer:\n${text}, dont add subject only body`
   };
 
   resultDiv.textContent = "Processing...";
@@ -55,6 +56,9 @@ document.getElementById("extendBtn").addEventListener("click", () => {
 });
 document.getElementById("conciseBtn").addEventListener("click", () => {
   callGPT("concise", inputText.value);
+});
+document.getElementById("empathyBtn").addEventListener("click", () => {
+  callGPT("empathy", inputText.value);
 });
 
 document.getElementById("copyBtn").addEventListener("click", () => {
