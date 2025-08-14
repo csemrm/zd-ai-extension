@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ZD-AI-Extension</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <h3>ZD-AI Text Tool</h3>
+    <textarea id="inputText" placeholder="Paste your text here..."></textarea>
+    <br>
+    <button id="rephraseBtn">Rephrase</button>
+    <button id="extendBtn">Extend</button>
+    <button id="conciseBtn">Make Concise</button>
+    <h4>Result</h4>
+    <div id="result"></div>
+     <button id="copyBtn">Copy</button>
+    <!-- Load API key config first -->
+    <script src="config.js"></script>
+    <!-- Main popup JS -->
+    <script src="popup.js"></script>
+  </body>
+</html>
