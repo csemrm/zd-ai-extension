@@ -13,9 +13,9 @@ async function callGPT(actionType, text) {
   }
 
   const prompts = {
-    rephrase: `Please professionally rephrase the following text to ensure it is clear, formal, and polished, suitable for communication from a Customer Success Engineer:\n${text}`,
-    extend: `Please enhance the following text by elaborating on its details in a professional and formal manner appropriate for a Customer Success Engineer:\n${text}`,
-    concise: `Please rewrite the following text to be concise while maintaining a formal and professional tone suitable for a Customer Success Engineer:\n${text}`
+    rephrase: `You are a customer success agent. Please professionally rephrase the following text to ensure it is clear, formal, and polished, suitable for communication from a Customer Success Engineer:\n${text}, dont add subject only body`,
+    extend: `You are a customer success agent,Please enhance the following text by elaborating on its details in a professional and formal manner appropriate for a Customer Success Engineer:\n${text},  dont add subject only body`,
+    concise: `You are a customer success agent, Please rewrite the following text to be concise while maintaining a formal and professional tone suitable for a Customer Success Engineer:\n${text} , dont add subject only body`
   };
 
   resultDiv.textContent = "Processing...";
