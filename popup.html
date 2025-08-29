@@ -7,7 +7,14 @@
   </head>
   <body>
     <h3>ZD-AI Text Tool</h3>
-    <textarea id="inputText" placeholder="Paste your text here..."></textarea>
+    <div style="margin-top:8px;">
+      <input id="ticketInput" type="text" placeholder="Zendesk ticket URL or ID…" style="width: 70%; " />
+      <button id="loadCommentBtn" title="Load the latest comment from the ticket" style="margin-top:8px;">Load Comment</button>
+    </div>
+    <h4 style="margin-top:10px;">Last Ticket Comment</h4>
+    <textarea id="lastCommentText" placeholder="Last Zendesk comment will appear here…" readonly></textarea>
+    <h4 style="margin-top:10px;">My Draft Response</h4>
+    <textarea id="myResponseText" placeholder="Write your response here…"></textarea>
     <br>
     <button id="rephraseBtn">Rephrase</button>
     <button id="empathyBtn">with Empathy</button>
@@ -15,7 +22,7 @@
     <button id="conciseBtn">Concise</button>
     <h4>Result</h4>
     <div id="result"></div>
-     <button id="copyBtn">Copy</button>
+    <button id="copyBtn">Make a Copy</button>
     <!-- Load API key config first -->
     <script src="config.js"></script>
     <!-- Main popup JS -->

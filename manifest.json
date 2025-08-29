@@ -3,7 +3,8 @@
   "name": "ZD-AI-Extension",
   "version": "1.0.0",
   "description": "AI text rephraser, extender, and concise tool",
-  "permissions": ["storage", "activeTab", "scripting"],
+  "permissions": ["storage", "activeTab", "scripting", "tabs", "clipboardWrite"],
+  "host_permissions": ["https://*.zendesk.com/*"],
   "background": {
     "service_worker": "background.js"
   },
